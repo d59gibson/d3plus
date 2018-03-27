@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript" src="https://d3plus.org/js/d3plus.v2.0.0-alpha.16.full.min.js"></script>
+  </head>
+  <body>
+    <p>Hello!</p>
+	<script type="text/javascript">
+	var data = [
+  {id: "Apple", color: "orange", image: "https://datausa.io/static/img/attrs/thing_apple.png"},
+  {id: "Fish", color: "blue", image: "https://datausa.io/static/img/attrs/thing_fish.png"},
+  {id: "Tomato", color: "red", image: "https://datausa.io/static/img/attrs/thing_tomato.png"}
+];
+
+var legend = new d3plus.Legend()
+  .data(data)
+  .label(false)
+  .shapeConfig({
+    backgroundImage: function(d) { return d.image; },
+    fill: function(d) { return d.color; },
+    height: 25,
+    width: 25
+  })
+  .render();
+  </script>
+  </body>
+</html>

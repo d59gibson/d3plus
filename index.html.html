@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
+	<script type="text/javascript" src="https://d3plus.org/js/d3plus.v2.0.0-alpha.16.full.min.js"></script>
+  </head>
+  <body>
+    <p>Hello!</p>
+	<script type="text/javascript">
+	var data = [
+  {id: "alpha", value: 29},
+  {id: "beta",  value: 10},
+  {id: "gamma", value: 2},
+  {id: "delta", value: 29},
+  {id: "eta",   value: 25}
+];
+
+new d3plus.Treemap()
+  .data(data)
+  .shapeConfig({
+    labelConfig: {
+      fontFamily: "serif",
+      fontMax: 100
+    }
+  })
+  .render();
+  </script>
+  </body>
+</html>
